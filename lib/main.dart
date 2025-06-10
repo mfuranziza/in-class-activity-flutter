@@ -23,7 +23,7 @@ class _ExplicitAnimationScreenState extends State<ExplicitAnimationScreen> {
         body: Column(
           children: [
             Center(
-              child: RotationTransition(turns: AlwaysStoppedAnimation(0),
+              child: RotationTransition(turns: _animation,
                     child: Icon(Icons.refresh, size: 100,)
               ,),
             ),
