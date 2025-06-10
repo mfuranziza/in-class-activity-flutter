@@ -17,8 +17,22 @@ class _ExplicitAnimationScreenState extends State<ExplicitAnimationScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Explicit Animation')),
-        body: const Text("Body"),
+        appBar: AppBar(title: const Text('Explicit Animation'),
+        backgroundColor: Colors.amber,
+        ),
+        body: Column(
+          children: [
+            Center(
+              child: RotationTransition(turns: AlwaysStoppedAnimation(0),
+                    child: Icon(Icons.refresh, size: 100,)
+              ,),
+            ),
+
+            Spacer(),
+
+            ElevatedButton(onPressed: (){}, child: const Text("Animate")),
+          ],
+        ),
       ),
     );
   }
