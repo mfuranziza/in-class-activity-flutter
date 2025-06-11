@@ -44,10 +44,18 @@ class _ExplicitAnimationScreenState extends State<ExplicitAnimationScreen> with 
             ),
 
             Spacer(),
-
-            ElevatedButton(onPressed: (){}, child: const Text("Animate")),
+            ElevatedButton(
+              onPressed: (){}, 
+              child: const Text("Animate"),
+              ),
           ],
         ),
+    floatingActionButton: FloatingActionButton(
+    onPressed: () {
+      _controller.forward(); 
+    },
+    child: Icon(Icons.play_arrow),
+  ),
       ),
     );
   }
